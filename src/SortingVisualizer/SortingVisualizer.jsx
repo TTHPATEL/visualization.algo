@@ -3,6 +3,8 @@ import {getMergeSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js'
 import './SortingVisualizer.css';
 
 
+
+
 const ANIMATION_SPEED_MS = 3;
 const NUMBER_OF_ARRAY_BARS = 310;
 
@@ -79,11 +81,11 @@ export default class SortingVisualizer extends React.Component
         }
     }
 
-    quicksort() { }
+    // quicksort() { }
 
-    heapsort() { }
+    // heapsort() { }
 
-    bubblesort()  { }
+    // bubblesort()  { }
 
 
     render()
@@ -100,12 +102,14 @@ export default class SortingVisualizer extends React.Component
                 style={{height: `${value}px`}}></div>
                 ))}
 
-            <button onClick={() => this.resetArray()}>Generate New Array</button>
-            <button onClick={() => this.mergesort()}>Merge Array</button>
-            <button onClick={() => this.quicksort()}>Quick Array</button>
+            <button className='btn1' onClick={() => this.resetArray()}>GENERATE NEW ARRAY</button>
+            
+            
+            <button className='btn2' onClick={() => this.mergesort()}>MERGE SORT ARRAY</button>
+            {/* <button onClick={() => this.quicksort()}>Quick Array</button>
             <button onClick={() => this.heapsort()}>Heap Array</button>
             <button onClick={() => this.bubblesort()}>Bubble Array</button>
-            <button onClick={() => this.testSortingAlgorithms()}>Test Sorting Algorithm</button>
+            <button onClick={() => this.testSortingAlgorithms()}>Test Sorting Algorithm</button> */}
         
         </div>
         );
